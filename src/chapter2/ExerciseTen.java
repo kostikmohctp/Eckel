@@ -5,7 +5,7 @@ public class ExerciseTen {
 	/**
 	 * @param args
 	 */
-	static int first = 0x1010;
+	static int first = 0x0010;
 	static int second = 0x1011;
 
 	public static void logicalAnd(int firstVar, int secondVar) {
