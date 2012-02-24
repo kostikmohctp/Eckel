@@ -13,21 +13,38 @@ package chapter3;
 
 public class ExerciseFive {
 
-	/**
-	 * @param args
-	 */
-	static int first = 0x1010;
-	static int second = 0x1011;
-	
+	static int first = 66456;
+	static int second = 66457;
+
+	public static String intNumberToBinary(int binary) {
+		String digit = "";
+		boolean start = true;
+
+		while (start) {
+			digit = binary % 2 + digit;
+			binary = binary / 2;
+
+			if (binary == 0) {
+				start = false;
+			}
+		}
+		return digit;
+	}
+
 	public static void main(String[] args) {
-// 		return (boolean) ? (case1) : (elseCase2);
+		// return (boolean) ? (case1) : (elseCase2);
 
 		System.out.println("first  decimal: " + first + " = binary: "
 				+ Integer.toBinaryString(first));
 		System.out.println("second decimal: " + second + " = binary: "
 				+ Integer.toBinaryString(second));
-		
-		
+
+		String firstInBinary = intNumberToBinary(first);
+		String secondInBinary = intNumberToBinary(second);
+
+		System.out.println(firstInBinary);
+		System.out.println(secondInBinary);
+
 	}
 
 }
