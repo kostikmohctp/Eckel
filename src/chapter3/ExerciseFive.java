@@ -14,7 +14,7 @@ package chapter3;
 public class ExerciseFive {
 
 	static int first = 66456;
-	static int second = 66457;
+	static int second = 66456;
 
 	public static String intNumberToBinary(int binary) {
 		String digit = "";
@@ -31,6 +31,37 @@ public class ExerciseFive {
 		return digit;
 	}
 
+	public static String intNumberToBinaryTernary(int binary) {
+		String digit = "";
+		boolean start = true;
+
+		while (start) {
+			digit = binary % 2 + digit;
+			binary = binary / 2;
+
+			if (binary == 0) {
+				start = false;
+			}
+		}
+		return digit;
+	}
+	public static String comparsion (char [] firstArray, char [] secondArray ){
+		int eofArray = firstArray.length;
+		
+		int counter = 0;
+		
+		for (int i=0; i < eofArray; i++){	
+			if (firstArray[i] == secondArray[i]){
+				counter++;
+			}
+			else break;			
+		}
+		
+		String s = ((counter == eofArray) ? ("Numbers are equal") : ("Numbers are different"));
+		return s;
+		
+	}
+	
 	public static void main(String[] args) {
 		// return (boolean) ? (case1) : (elseCase2);
 
@@ -44,7 +75,32 @@ public class ExerciseFive {
 
 		System.out.println(firstInBinary);
 		System.out.println(secondInBinary);
+		
+		int firstLength = firstInBinary.length();
+		int secondLength = secondInBinary.length();
 
+		System.out.println(firstLength);
+		System.out.println(secondLength);
+		
+		char[] firstArray = firstInBinary.toCharArray();
+		for (int i=0; i < firstLength;
+		i++){
+			System.out.print(firstArray[i]);
+		}
+		System.out.println();
+		
+		
+		char[] secondArray = secondInBinary.toCharArray();
+		for (int i=0; i < secondLength;
+		i++){
+			System.out.print(secondArray[i]);
+		}
+		System.out.println();
+		
+		// return (boolean) ? (case1) : (elseCase2);
+		String s = (firstLength == secondLength) ? (comparsion(firstArray,secondArray)) : ("Totally different");
+		
+		System.out.println(s);
 	}
 
 }
