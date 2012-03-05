@@ -28,6 +28,7 @@ public class Tank {
 		if (isEmpty) {
 			finalize();
 		}
+		else System.out.println("your tank available");
 	}
 
 	public static void main(String[] args) {
