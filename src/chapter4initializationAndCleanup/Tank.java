@@ -11,7 +11,8 @@ public class Tank {
 	private boolean isEmpty = false;
 
 	protected void finalize() {
-		System.out.println("Your tank has been destroyed");
+		System.out.println("your tank has been destroyed");
+		System.gc();
 	}
 
 	void fill() {
@@ -27,8 +28,12 @@ public class Tank {
 	void checkTank() {
 		if (isEmpty) {
 			finalize();
-		}
-		else System.out.println("your tank available");
+		} else
+			System.out.println("your tank available");
+	}
+
+	void printing() {
+		System.out.println("ta daaam!");
 	}
 
 	public static void main(String[] args) {
@@ -38,8 +43,9 @@ public class Tank {
 		someTank.checkTank();
 		someTank.empty();
 		someTank.checkTank();
-
-		// System.gc();
+		System.gc();
+		someTank.printing();
+		System.gc();
 
 	}
 
