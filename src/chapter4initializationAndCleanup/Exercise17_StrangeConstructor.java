@@ -18,15 +18,17 @@ public class Exercise17_StrangeConstructor {
 
 		// Exercise17_StrangeConstructor[] someArray;
 
+		// this form is more useful, but
 		Exercise17_StrangeConstructor[] someArray = {
 				new Exercise17_StrangeConstructor("first"),
 				new Exercise17_StrangeConstructor("second"),
 				new Exercise17_StrangeConstructor("third") };
 
-		// someArray = new Exercise17_StrangeConstructor[] {
-		// new Exercise17_StrangeConstructor("first"),
-		// new Exercise17_StrangeConstructor("second"),
-		// new Exercise17_StrangeConstructor("third"), };
+		// this form is more flexible
+		Exercise17_StrangeConstructor[] someArray2 = new Exercise17_StrangeConstructor[] {
+				new Exercise17_StrangeConstructor("first"),
+				new Exercise17_StrangeConstructor("second"),
+				new Exercise17_StrangeConstructor("third"), };
 
 	}
 }
