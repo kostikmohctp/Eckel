@@ -9,5 +9,5 @@ public class Vector {
 	public void debug (String s){
 		System.out.println(s);
 	}
-
+	
 }
